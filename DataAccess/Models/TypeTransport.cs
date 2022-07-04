@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataAccess.Models
 {
@@ -9,7 +10,7 @@ namespace DataAccess.Models
         {
             Transports = new HashSet<Transport>();
         }
-
+        [Key]
         public string IdtypeTransport { get; set; } = null!;
         public string NameTranspors { get; set; } = null!;
 

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataAccess.Models
 {
     public partial class BookingSeviceDetail
     {
+        [Key]
         public string IdbookingSeviceDetail { get; set; } = null!;
         public string? Idbill { get; set; }
         public string? Idsevice { get; set; }

@@ -20,13 +20,17 @@ namespace DataAccess.DAO
 
             return list;
         }
-            
+
         public static List<Comment> GetCommentsByAccount(string idAcc)
         {
             List<Comment> list = new List<Comment>();
             using (var context = new ASMBOOKINGContext())
             {
                 list = context.Comments.Where(x => x.Idacc.Equals(idAcc)).ToList();
+                foreach (var a in list)
+                {
+                    a.IdaccNavigation = AccountDAO.FindAccountById(a.Idacc);
+                }
             }
 
             return list;
@@ -41,7 +45,10 @@ namespace DataAccess.DAO
                 using (var context = new ASMBOOKINGContext())
                 {
                     a = context.Comments.SingleOrDefault(x => x.Idcomment.Equals(id));
-
+                    if (a != null)
+                    {
+                        a.IdaccNavigation = AccountDAO.FindAccountById(a.Idacc);
+                    }
                 }
             }
             catch (Exception e)
@@ -130,6 +137,6 @@ namespace DataAccess.DAO
                 throw new Exception(e.Message);
             }
 
-        }   
+        }
     }
 }

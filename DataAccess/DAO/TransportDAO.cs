@@ -16,6 +16,10 @@ namespace DataAccess.DAO
             using (var context = new ASMBOOKINGContext())
             {
                 list = context.Transports.ToList();
+                foreach (var transport in list)
+                {
+                    transport.IdtypeTransportNavigation = TypeTransportDAO.GetTypeTransportById(transport.IdtypeTransport);
+                }
             }
 
             return list;
@@ -31,7 +35,10 @@ namespace DataAccess.DAO
                 using (var context = new ASMBOOKINGContext())
                 {
                     a = context.Transports.SingleOrDefault(x => x.Idtransport.Equals(id));
-
+                    if (a != null)
+                    {
+                        a.IdtypeTransportNavigation = TypeTransportDAO.GetTypeTransportById(a.IdtypeTransport);
+                    }
                 }
             }
             catch (Exception e)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataAccess.Models
 {
@@ -10,7 +11,7 @@ namespace DataAccess.Models
             Bills = new HashSet<Bill>();
             Comments = new HashSet<Comment>();
         }
-
+        [Key]
         public string Idacc { get; set; } = null!;
         public string Mail { get; set; } = null!;
         public string Password { get; set; } = null!;
