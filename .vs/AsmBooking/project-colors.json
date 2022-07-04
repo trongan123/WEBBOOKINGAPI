@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "22d5d8dc-63ab-4f6f-8f58-096508e0cdfe": {
+      "ProjectGuid": "22d5d8dc-63ab-4f6f-8f58-096508e0cdfe",
+      "DisplayName": "DataAccess",
+      "ColorIndex": 0
+    },
+    "b23d4d42-7024-4206-90ea-afdbf9f41add": {
+      "ProjectGuid": "b23d4d42-7024-4206-90ea-afdbf9f41add",
+      "DisplayName": "BookingAPI",
+      "ColorIndex": 1
+    },
+    "5288297d-ef80-487e-904f-f5fbdef7b572": {
+      "ProjectGuid": "5288297d-ef80-487e-904f-f5fbdef7b572",
+      "DisplayName": "BusinessObjects",
+      "ColorIndex": 2
+    },
+    "e21346cf-df34-4dbe-b6d4-48e70c96308f": {
+      "ProjectGuid": "e21346cf-df34-4dbe-b6d4-48e70c96308f",
+      "DisplayName": "Repositories",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}
