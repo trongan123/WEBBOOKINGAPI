@@ -15,6 +15,11 @@ namespace DataAccess.DAO
             using (var context = new ASMBOOKINGContext())
             {
                 list = context.Bills.ToList();
+                foreach (var bill in list)
+                {
+                    bill.IdaccNavigation = AccountDAO.FindAccountById(bill.Idacc);
+
+                }
             }
             return list;
         }
@@ -26,6 +31,10 @@ namespace DataAccess.DAO
                 using (var context = new ASMBOOKINGContext())
                 {
                     a = context.Bills.SingleOrDefault(x => x.Idbill.Equals(id));
+                    if (a != null)
+                    {
+                        a.IdaccNavigation = AccountDAO.FindAccountById(a.Idacc);
+                    }
 
                 }
             }

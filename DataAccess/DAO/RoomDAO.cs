@@ -16,6 +16,10 @@ namespace DataAccess.DAO
             using (var _context = new ASMBOOKINGContext())
             {
                 list = _context.Rooms.ToList();
+                foreach(Room room in list)
+                {
+                    room.IdroomTypeNavigation = RoomTypeDAO.GetRoomTypeById(room.IdroomType);
+                }
             }
 
             return list;
@@ -29,6 +33,10 @@ namespace DataAccess.DAO
                 using (var context = new ASMBOOKINGContext())
                 {
                     a = context.Rooms.SingleOrDefault(x => x.Idroom.Equals(id));
+                    if(a != null)
+                    {
+                        a.IdroomTypeNavigation = RoomTypeDAO.GetRoomTypeById(a.IdroomType);
+                    }
 
                 }
             }

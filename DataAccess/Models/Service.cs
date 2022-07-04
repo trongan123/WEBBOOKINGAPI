@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataAccess.Models
 {
@@ -10,6 +11,7 @@ namespace DataAccess.Models
             BookingSeviceDetails = new HashSet<BookingSeviceDetail>();
         }
 
+        [Key] 
         public string Idservice { get; set; } = null!;
         public string NameService { get; set; } = null!;
         public decimal Price { get; set; }

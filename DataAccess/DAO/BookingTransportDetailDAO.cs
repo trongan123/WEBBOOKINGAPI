@@ -16,6 +16,11 @@ namespace DataAccess.DAO
             using (var context = new ASMBOOKINGContext())
             {
                 list = context.BookingTransportDetails.Where(x => x.Idbill.Equals(id)).ToList();
+                foreach(BookingTransportDetail a in list)
+                {
+                    a.IdbillNavigation = BillDAO.GetBillById(a.Idbill);
+                    a.IdtransportNavigation = TransportDAO.GetTransportById(a.Idtransport);
+                }
             }
 
             return list;
@@ -31,7 +36,11 @@ namespace DataAccess.DAO
                 using (var context = new ASMBOOKINGContext())
                 {
                     a = context.BookingTransportDetails.SingleOrDefault(x => x.IdbookingTransportDetail.Equals(id));
-
+                    if (a != null)
+                    {
+                        a.IdbillNavigation = BillDAO.GetBillById(a.Idbill);
+                        a.IdtransportNavigation = TransportDAO.GetTransportById(a.Idtransport);
+                    }
                 }
             }
             catch (Exception e)

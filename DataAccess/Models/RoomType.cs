@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataAccess.Models
 {
@@ -9,7 +10,7 @@ namespace DataAccess.Models
         {
             Rooms = new HashSet<Room>();
         }
-
+        [Key]
         public string IdroomType { get; set; } = null!;
         public string NameRoomType { get; set; } = null!;
 
