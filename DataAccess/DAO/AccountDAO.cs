@@ -73,6 +73,7 @@ namespace DataAccess.DAO
                 using (var context = new ASMBOOKINGContext())
                 {
                     a = context.Accounts.SingleOrDefault(x => x.Mail.Equals(Emai) && x.Password.Equals(password));
+
                 }
             }
             catch (Exception e)

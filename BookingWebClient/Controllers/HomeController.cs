@@ -15,7 +15,6 @@ namespace BookingWebClient.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.username = HttpContext.Session.GetString("IdUser");
             return View();
         }
 

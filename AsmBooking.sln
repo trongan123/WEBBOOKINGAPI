@@ -7,9 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingAPI", "BookingAPI\BookingAPI.csproj", "{B23D4D42-7024-4206-90EA-AFDBF9F41ADD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositories\Repositories.csproj", "{E21346CF-DF34-4DBE-B6D4-48E70C96308F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingWebClient", "BookingWebClient\BookingWebClient.csproj", "{E9A471FF-F8E2-48D8-B82C-DD0F19D1CEB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{E21346CF-DF34-4DBE-B6D4-48E70C96308F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{E21346CF-DF34-4DBE-B6D4-48E70C96308F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E21346CF-DF34-4DBE-B6D4-48E70C96308F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E21346CF-DF34-4DBE-B6D4-48E70C96308F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9A471FF-F8E2-48D8-B82C-DD0F19D1CEB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9A471FF-F8E2-48D8-B82C-DD0F19D1CEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9A471FF-F8E2-48D8-B82C-DD0F19D1CEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9A471FF-F8E2-48D8-B82C-DD0F19D1CEB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
