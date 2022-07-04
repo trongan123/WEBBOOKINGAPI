@@ -22,6 +22,9 @@ namespace BookingAPI.Controllers
         [HttpGet("id")]
         public ActionResult<Account> GetAccountById(string id) => accountService.GetAccountById(id);
 
+        [HttpGet("{email}/{pass}")]
+        public ActionResult<Account> Login(string email, string pass) => accountService.Login(email,pass);
+
         [HttpGet("phone")]
         public ActionResult<IEnumerable<Account>> GetAccountByPhone(String phone) => accountService.GetAccountsByPhone(phone);
 
