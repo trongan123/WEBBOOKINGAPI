@@ -45,6 +45,7 @@ namespace BookingWebClient.Controllers
                 return View("Index");
             }
         }
+
         public IActionResult Register()
         {
             return View();
@@ -66,6 +67,7 @@ namespace BookingWebClient.Controllers
          
             return View(account);
         }
+
 
 
 
