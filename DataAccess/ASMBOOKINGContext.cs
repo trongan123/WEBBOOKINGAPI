@@ -62,6 +62,9 @@ namespace DataAccess
                 entity.Property(e => e.Password)
                     .HasMaxLength(32)
                     .IsUnicode(false);
+                entity.Property(e => e.Mail)
+                    .HasMaxLength(300)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Phone)
                     .HasMaxLength(13)

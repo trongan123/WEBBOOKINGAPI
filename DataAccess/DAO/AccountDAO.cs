@@ -40,7 +40,7 @@ namespace DataAccess.DAO
             }
             return a;
         }
-        public String GetIDCuoi()
+        public static string GetIDCuoi()
         {
             List<Account> accounts;
 
@@ -104,6 +104,7 @@ namespace DataAccess.DAO
             {
                 using (var context = new ASMBOOKINGContext())
                 {
+                    a.Idacc = GetIDCuoi();
                     context.Accounts.Add(a);
                     context.SaveChanges();
                 }

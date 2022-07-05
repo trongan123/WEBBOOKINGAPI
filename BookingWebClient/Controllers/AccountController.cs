@@ -46,6 +46,30 @@ namespace BookingWebClient.Controllers
             }
         }
 
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register([Bind("Idacc,Mail,Password,FullName,Address,Phone,St")] Account account)
+        {
+
+
+            if (ModelState.IsValid)
+            {
+                HttpResponseMessage response1 = await client.PostAsJsonAsync(AccountAPiUrl, account);
+                response1.EnsureSuccessStatusCode();
+
+                return RedirectToAction("Index", "Home");
+            }
+
+         
+            return View(account);
+        }
+
+
+
 
     }
 }

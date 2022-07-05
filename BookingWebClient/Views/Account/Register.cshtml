@@ -1,7 +1,7 @@
 ﻿@{
     Layout = "";
 }
-
+@model DataAccess.Models.Account
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +9,7 @@
     <title>Corona Homestay</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="~/js/pickmeup.min.js"></script>
-    <script type="text/javascript" src="~/jst/handleCounter.js"></script>
+    <script type="text/javascript" src="~/js/handleCounter.js"></script>
     <link rel="stylesheet" type="text/css" href="~/css/pickmeup.css">
     <link rel="stylesheet" type="text/css" href="~/css/handle-counter.min.css">
     <link rel="stylesheet" type="text/css" href="~/css/main.css">
@@ -25,23 +25,30 @@
     </header>
 
     <section class="tm-main">
-        <p>Login</p>
+        <p>Register</p>
     </section>
 
     <section class="tm-booking">
 
-        <form asp-action="Login">
+        <form asp-action="Register">
             <div class="tm-form">
-                <input type="email" name="email" placeholder="E-mail">
-                <input type="password" name="password" placeholder="Password">
-                           
+                <input type="hidden" asp-for="Idacc" value="A0001"/>
+                <input type="hidden" asp-for="St" value="1"/>
+                <input type="text" asp-for="FullName" placeholder="Name">
+                <span asp-validation-for="FullName" class="text-danger"></span>
+                <input type="email" asp-for="Mail" placeholder="E-mail">
+                <span asp-validation-for="Mail" class="text-danger"></span>
+                <input type="phone" asp-for="Phone" placeholder="PhoneNumber">
+                <span asp-validation-for="Phone" class="text-danger"></span>
+                <input type="address" asp-for="Address"  placeholder="Address">
+                <span asp-validation-for="Address" class="text-danger"></span>
+                <input type="password" asp-for="Password" placeholder="Password">            
+                <span asp-validation-for="Password" class="text-danger"></span>
                 <div class="tm-resbutton">
-
-                  <input type="submit" value="Login" />
-
+                                   <input type="submit" value="Register" />
                </div>
            </div>
-       </form>       
+       </form>
    </section>
 
    <footer class="tm-footer">
@@ -68,7 +75,6 @@
         <a href="#">  <img src="~/images/insta.png"> </a>
         
     </div>
-
 
 
 
